@@ -1,0 +1,642 @@
+/* Modern color palette with feminine touches */
+:root {
+    --primary-color: #9f7aea;    /* Soft purple */
+    --secondary-color: #f6e7ff;  /* Light purple */
+    --accent-color: #805ad5;     /* Deep purple */
+    --text-color: #2d3748;      /* Dark gray */
+    --light-bg: #faf5ff;        /* Very light purple */
+}
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+/* Navigation */
+.navbar {
+    background-color: white;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+}
+
+.navbar-dark .navbar-brand,
+.navbar-dark .nav-link {
+    color: var(--text-color);
+}
+
+.navbar-dark .nav-link:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, white 100%);
+    padding: 120px 0;
+    position: relative;
+}
+
+.hero-section h1 {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.hero-section p {
+    color: var(--text-color);
+}
+
+/* Section Styling */
+.section-title {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 600;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 10px auto;
+}
+
+/* Skill Cards */
+.skill-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+/* Project Cards */
+.project-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+/* Contact Section Styling */
+.contact-info {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.contact-info h4 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.contact-details {
+    margin-bottom: 2rem;
+}
+
+.contact-details p {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contact-details i {
+    width: 35px;
+    height: 35px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+}
+
+.contact-details a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: var(--primary-color);
+}
+
+/* Social Links Styling */
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.social-link {
+    flex: 1;
+    min-width: 120px;
+    padding: 0.8rem;
+    background: white;
+    border: 2px solid var(--secondary-color);
+    border-radius: 25px;
+    color: var(--text-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.social-link i {
+    font-size: 1.1rem;
+}
+
+/* Form Styling */
+.form-control {
+    border: 2px solid var(--secondary-color);
+    padding: 0.8rem;
+    border-radius: 10px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: var(--primary-color);
+}
+
+/* Education Section Styling */
+.education-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+}
+
+.education-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--primary-color);
+}
+
+.education-year {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.education-card h4 {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.school-name {
+    color: var(--text-color);
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+.location {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+.location i {
+    margin-right: 5px;
+    color: var(--primary-color);
+}
+
+/* Skills Section Styling */
+.skills-subtitle {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Technical Skills Cards */
+.skill-card {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    height: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.skill-header i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-right: 1rem;
+}
+
+.skill-header h4 {
+    margin: 0;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.skill-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.skill-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-item span {
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+.skill-level {
+    height: 8px;
+    width: 100px;
+    background: var(--secondary-color);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-level::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+.skill-level.expert::after {
+    width: 95%;
+}
+
+.skill-level.advanced::after {
+    width: 85%;
+}
+
+.skill-level.intermediate::after {
+    width: 70%;
+}
+
+.skill-level.beginner::after {
+    width: 40%;
+}
+
+/* Soft Skills Cards */
+.soft-skill-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    height: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.soft-skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.soft-skill-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.soft-skill-icon i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.soft-skill-card h4 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.rating {
+    color: var(--primary-color);
+}
+
+.rating i {
+    margin: 0 2px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .skill-card, .soft-skill-card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Experience Section Styling */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: var(--primary-color);
+}
+
+.timeline-item {
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 0 0 3px var(--secondary-color);
+}
+
+.timeline-content {
+    width: 85%;
+    margin-left: auto;
+    position: relative;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.experience-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.experience-company h4 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.experience-company h5 {
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.experience-duration {
+    text-align: right;
+}
+
+.experience-duration .badge {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    margin-bottom: 0.5rem;
+}
+
+.experience-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.experience-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.experience-list li:last-child {
+    margin-bottom: 0;
+}
+
+.experience-list i {
+    color: var(--primary-color);
+    margin-right: 10px;
+    margin-top: 5px;
+    font-size: 0.8rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 30px;
+    }
+
+    .timeline-item::before {
+        left: 30px;
+    }
+
+    .timeline-content {
+        width: calc(100% - 60px);
+        margin-left: 60px;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+        margin-left: 60px;
+        margin-right: 0;
+    }
+
+    .experience-header {
+        flex-direction: column;
+    }
+
+    .experience-duration {
+        text-align: left;
+        margin-top: 1rem;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .contact-info {
+        margin-bottom: 2rem;
+    }
+    
+    .social-link {
+        min-width: calc(50% - 0.5rem);
+    }
+}
+
+/* Updated resume card styles */
+.resume-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.resume-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.resume-icon i {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.resume-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.resume-card p {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.resume-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    border: 2px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.resume-btn:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Project Image Styling */
+/* Option 1: Contain the full image */
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain; /* This shows the entire image */
+    border-radius: 15px 15px 0 0;
+    background-color: #f8f9fa; /* Light background for image container */
+}
+
+
